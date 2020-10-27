@@ -1,23 +1,20 @@
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Implementa la interface Heap para el caso de un montículo binario de máximos.
  */
 public class BinaryMaximalHeap implements Heap {
 
-    private int[] T;  //Vector de elementos
+    private Integer[] T;  //Vector de elementos
     int c;          //Contador de número de elementos
     int MAX;        //Tamaño máximo del montículo
 
     public BinaryMaximalHeap(int n) {
-        T = new int[n + 1];
+        T = new Integer[n + 1];
         c = 0;
         MAX = n;
     }
 
-    BinaryMaximalHeap(int[] vector) {
-        T = vector;
+    BinaryMaximalHeap(Integer[] vector) {
+        T = vector.clone();
         c = vector.length - 1;
         MAX = Integer.MAX_VALUE;
     }
@@ -28,9 +25,9 @@ public class BinaryMaximalHeap implements Heap {
      * @param vector Vector [1..n] cuyo elemento 0 es nulo y n == length - 1
      * @return Heap que cumple las propiedades del montículo binario
      */
-    public static Heap createHeap(int[] vector){
+    public static Heap createHeap(Integer[] vector){
         int n = vector.length - 1;
-        BinaryMaximalHeap heap = new BinaryMaximalHeap(vector);//Este constructor inicaliza c, MAX y T (desordenado)
+        BinaryMaximalHeap heap = new BinaryMaximalHeap(vector);//Este constructor inicializa c, MAX y T (desordenado)
         for(int i = 2; i < n; i++) {
             heap.floatUp(i);
         }
@@ -43,7 +40,7 @@ public class BinaryMaximalHeap implements Heap {
      * @param vector Vector [1..n] cuyo elemento 0 es nulo y n == length - 1
      * @return Heap que cumple las propiedades del montículo binario
      */
-    public static Heap createHeapLineal(int[] vector){
+    public static Heap createHeapLineal(Integer[] vector){
         int n = vector.length - 1;
         BinaryMaximalHeap heap = new BinaryMaximalHeap(vector);//Este constructor inicaliza c, MAX y T (desordenado)
         for(int i = n/2; i >= 1; i--) {
@@ -121,10 +118,10 @@ public class BinaryMaximalHeap implements Heap {
      * @param vector desordenado con índices [1..n] (La primera posición del array se ignorará)
      * @return vector ordenado
      */
-    public static int[] heapSort(int[] vector){
+    public static Integer[] heapSort(Integer[] vector){
         int e;
         Heap heap = createHeapLineal(vector);
-        int[] sortedVector = new int[vector.length];
+        Integer[] sortedVector = new Integer[vector.length];
         sortedVector[0] = 0;
         for (int i = 1; i < vector.length; i++) {
             e = heap.getTop();
