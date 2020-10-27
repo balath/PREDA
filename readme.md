@@ -8,9 +8,9 @@ asignatura del título (PREDA) del Grado de Ingeniería Informática de la UNED.
 related to the subject of the title (PREDA) from Computer Engineering Degree at UNED._</span>
 
 Content:
-+ Heaps
-    + Bynary Heap :heavy_check_mark:
++ [Heaps](https://github.com/balath/PREDA/blob/master/src/iterfaces/Heap.java)
+    + [Bynary Heap](https://github.com/balath/PREDA/tree/master/src/implementations/heaps) :heavy_check_mark:
     + Binomial Heap :construction:
-    + Fibonacci Heap (issue #1)
-
+    + Fibonacci Heap (issue [#1](https://github.com/balath/PREDA/issues/1))
++ 
 

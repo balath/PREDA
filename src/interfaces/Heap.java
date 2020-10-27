@@ -1,4 +1,4 @@
-package Interfaces;
+package interfaces;
 
 /**
  * Define las operaciones básicas de un montículo de máximos(mínimos) según el

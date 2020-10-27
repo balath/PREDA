@@ -1,5 +1,5 @@
-package Implementations.Heaps;
-import Interfaces.Heap;
+package implementations.heaps;
+import interfaces.Heap;
 
 /**
  * Implementa la interface Interfaces.Heap para el caso de un montículo binario de máximos.
