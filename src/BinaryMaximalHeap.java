@@ -3,9 +3,9 @@
  */
 public class BinaryMaximalHeap implements Heap {
 
-    private Integer[] T;  //Vector de elementos
-    int c;          //Contador de número de elementos
-    int MAX;        //Tamaño máximo del montículo
+    protected Integer[] T;  //Vector de elementos
+    protected int c;          //Contador de número de elementos
+    protected int MAX;        //Tamaño máximo del montículo
 
     public BinaryMaximalHeap(int n) {
         T = new Integer[n + 1];
@@ -27,7 +27,7 @@ public class BinaryMaximalHeap implements Heap {
      */
     public static Heap createHeap(Integer[] vector){
         int n = vector.length - 1;
-        BinaryMaximalHeap heap = new BinaryMaximalHeap(vector);//Este constructor inicializa c, MAX y T (desordenado)
+        Heap heap = new BinaryMaximalHeap(vector);//Este constructor inicializa c, MAX y T (desordenado)
         for(int i = 2; i < n; i++) {
             heap.floatUp(i);
         }
@@ -42,7 +42,7 @@ public class BinaryMaximalHeap implements Heap {
      */
     public static Heap createHeapLineal(Integer[] vector){
         int n = vector.length - 1;
-        BinaryMaximalHeap heap = new BinaryMaximalHeap(vector);//Este constructor inicaliza c, MAX y T (desordenado)
+        Heap heap = new BinaryMaximalHeap(vector);//Este constructor inicaliza c, MAX y T (desordenado)
         for(int i = n/2; i >= 1; i--) {
             heap.sink(i);
         }
