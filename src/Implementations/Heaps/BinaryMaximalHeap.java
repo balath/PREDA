@@ -1,5 +1,8 @@
+package Implementations.Heaps;
+import Interfaces.Heap;
+
 /**
- * Implementa la interface Heap para el caso de un montículo binario de máximos.
+ * Implementa la interface Interfaces.Heap para el caso de un montículo binario de máximos.
  */
 public class BinaryMaximalHeap implements Heap {
 
@@ -13,7 +16,7 @@ public class BinaryMaximalHeap implements Heap {
         MAX = n;
     }
 
-    BinaryMaximalHeap(Integer[] vector) {
+    public BinaryMaximalHeap(Integer[] vector) {
         T = vector.clone();
         c = vector.length - 1;
         MAX = Integer.MAX_VALUE;
@@ -23,7 +26,7 @@ public class BinaryMaximalHeap implements Heap {
      * Crea un montículo a partir de un vector con coste O(n log n)
      * @pre El vector de parámetro se usa con índices de 1 a n
      * @param vector Vector [1..n] cuyo elemento 0 es nulo y n == length - 1
-     * @return Heap que cumple las propiedades del montículo binario
+     * @return Interfaces.Heap que cumple las propiedades del montículo binario
      */
     public static Heap createHeap(Integer[] vector){
         int n = vector.length - 1;
@@ -38,7 +41,7 @@ public class BinaryMaximalHeap implements Heap {
      * Crea un montículo a partir de un vector con coste O(n)
      * @pre El vector de parámetro se usa con índices de 1 a n
      * @param vector Vector [1..n] cuyo elemento 0 es nulo y n == length - 1
-     * @return Heap que cumple las propiedades del montículo binario
+     * @return Interfaces.Heap que cumple las propiedades del montículo binario
      */
     public static Heap createHeapLineal(Integer[] vector){
         int n = vector.length - 1;
@@ -88,7 +91,7 @@ public class BinaryMaximalHeap implements Heap {
     @Override
     public void insert(int element) {
         if (c == MAX)
-            throw new ArrayIndexOutOfBoundsException("Filled Heap");
+            throw new ArrayIndexOutOfBoundsException("Filled Interfaces.Heap");
         else {
             c ++;
             T[c] = element;
@@ -98,13 +101,13 @@ public class BinaryMaximalHeap implements Heap {
 
     @Override
     public int first() {
-        if (c == 0) throw new ArrayIndexOutOfBoundsException("Empty Heap");
+        if (c == 0) throw new ArrayIndexOutOfBoundsException("Empty Interfaces.Heap");
         return T[1];
     }
 
     @Override
     public int getTop() {
-        if (c == 0) throw new ArrayIndexOutOfBoundsException("Empty Heap");
+        if (c == 0) throw new ArrayIndexOutOfBoundsException("Empty Interfaces.Heap");
         int cima = T[1];
         T[1] = T[c];
         c --;

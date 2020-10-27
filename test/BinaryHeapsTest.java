@@ -1,3 +1,6 @@
+import Implementations.Heaps.BinaryMaximalHeap;
+import Implementations.Heaps.BinaryMinimalHeap;
+import Interfaces.Heap;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

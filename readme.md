@@ -9,6 +9,6 @@ related to the subject of the title (PREDA) from Computer Engineering Degree at 
 
 Content:
 + Heaps
-    + Bynary Heap :heavy_check_mark:
-    + Binomial Heap :construction:
-    + Fibonacci Heap (issue #1)
+    + Bynary Interfaces.Heap :heavy_check_mark:
+    + Binomial Interfaces.Heap :construction:
+    + Fibonacci Interfaces.Heap (issue #1)

@@ -1,3 +1,5 @@
+package Interfaces;
+
 /**
  * Define las operaciones básicas de un montículo de máximos(mínimos) según el
  * apartado [2.2.1] del libro base (pg. 33).

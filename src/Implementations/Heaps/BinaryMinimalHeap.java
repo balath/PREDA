@@ -1,5 +1,9 @@
+package Implementations.Heaps;
+
+import Interfaces.Heap;
+
 /**
- * Implementa la interface Heap para el caso de un montículo binario de mínimos, extendiendo del de máximos.
+ * Implementa la interface Interfaces.Heap para el caso de un montículo binario de mínimos, extendiendo del de máximos.
  */
 public class BinaryMinimalHeap extends BinaryMaximalHeap implements Heap {
 
@@ -7,7 +11,7 @@ public class BinaryMinimalHeap extends BinaryMaximalHeap implements Heap {
         super(n);
     }
 
-    BinaryMinimalHeap(Integer[] vector) {
+    public BinaryMinimalHeap(Integer[] vector) {
         super(vector);
     }
 
@@ -15,7 +19,7 @@ public class BinaryMinimalHeap extends BinaryMaximalHeap implements Heap {
      * Crea un montículo a partir de un vector con coste O(n log n)
      * @pre El vector de parámetro se usa con índices de 1 a n
      * @param vector Vector [1..n] cuyo elemento 0 es nulo y n == length - 1
-     * @return Heap que cumple las propiedades del montículo binario
+     * @return Interfaces.Heap que cumple las propiedades del montículo binario
      */
     public static Heap createHeap(Integer[] vector){
         int n = vector.length - 1;
@@ -30,7 +34,7 @@ public class BinaryMinimalHeap extends BinaryMaximalHeap implements Heap {
      * Crea un montículo a partir de un vector con coste O(n)
      * @pre El vector de parámetro se usa con índices de 1 a n
      * @param vector Vector [1..n] cuyo elemento 0 es nulo y n == length - 1
-     * @return Heap que cumple las propiedades del montículo binario
+     * @return Interfaces.Heap que cumple las propiedades del montículo binario
      */
     public static Heap createHeapLineal(Integer[] vector){
         int n = vector.length - 1;
