@@ -11,4 +11,4 @@ Content:
 + Heaps
     + Bynary Heap :heavy_check_mark:
     + Binomial Heap :construction:
-    + Fibonacci Heap (issue #1)
+    + Fibonacci Heap (issue [#1](https://github.com/balath/PREDA/issues/1))
