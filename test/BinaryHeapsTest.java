@@ -2,8 +2,9 @@ import implementations.heaps.BinaryMaximalHeap;
 import implementations.heaps.BinaryMinimalHeap;
 import interfaces.Heap;
 import org.junit.jupiter.api.Test;
-
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,13 +13,13 @@ class BinaryHeapsTest {
     private static Heap emptyHeap = new BinaryMaximalHeap(8);
 
     @Test
-    void createEmptyHeap() {
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> emptyHeap.first());
+    void isEmpty() {
+        assert(emptyHeap.isEmpty());
     }
 
     @Test
-    void isEmpty() {
-        assert(emptyHeap.isEmpty());
+    void createEmptyHeap() {
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> emptyHeap.first());
     }
 
     @Test
