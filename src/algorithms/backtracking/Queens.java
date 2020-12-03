@@ -13,26 +13,29 @@ public class Queens {
         queens(new Integer[n+1], n, 1);
     }
 
-    public static void queens(Integer[] sequence, int n, int level ){
-        sequence[level] = 0;
-        while (sequence[level] < n) {
-            sequence[level]++;
-            if (accept(sequence, level)) {
+    //Solves the n-queens problem with backtracking algorithm
+    public static void queens(Integer[] solution, int n, int level ){
+        solution[level] = 0;
+        while (solution[level] < n) {
+            solution[level]++;
+            //Method accept(Integer[] solution, int level) checks queens are not kill themselves
+            if (accept(solution, level)) {
                 if (level == n) {
                     totalSolutions++;
-                    printChess(sequence);
+                    //Method printChess(Integer[] solution) show the solution in chess table format
+                    printChess(solution);
                 } else {
-                    queens(sequence, n, level + 1);
+                    queens(solution, n, level + 1);
                 }
             }
         }
     }
 
-    private static void printChess(Integer[] sequence) {
+    private static void printChess(Integer[] solution) {
         System.out.println("Solution " + totalSolutions + ":");
-        for (int i = 1; i < sequence.length; i++) {
-            for (int j = 1; j < sequence.length; j++) {
-                if (sequence[j] == i) System.out.print(" Q");
+        for (int i = 1; i < solution.length; i++) {
+            for (int j = 1; j < solution.length; j++) {
+                if (solution[j] == i) System.out.print(" Q");
                 else System.out.print(" X");
             }
             System.out.println();
@@ -40,17 +43,13 @@ public class Queens {
         System.out.println();
     }
 
-    private static boolean accept(Integer[] sequence, int level) {
+    private static boolean accept(Integer[] solution, int level) {
         for (int i = 1; i < level; i++) {
             if (
-                    (sequence[i] == sequence[level]) ||
-                    (Math.abs(sequence[i] - sequence[level]) == Math.abs(i - level))
+                    solution[i].equals(solution[level]) ||
+                    Math.abs(solution[i] - solution[level]) == Math.abs(i - level)
             ) return false;
         }
         return true;
     }
-
-
-
-
 }

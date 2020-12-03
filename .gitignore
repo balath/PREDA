@@ -1,6 +1,7 @@
-/src/ped1/
-/.idea/
-/test/ped1/
-/out
-
-
+src/ped1/
+.idea/
+test/ped1/
+out
+.gitignore
+*.iml
+.jqwik-database
