@@ -14,17 +14,17 @@ import java.util.List;
 class GivenSumSubSetTest {
 
     @Property(tries = 100)
-    boolean every_solution_subset_has_required_size(
+    boolean every_solution_subset_has_required_size_and_given_sum(
             @ForAll @Size(value = 50) List<@IntRange(min = 1, max = 100) @Unique Integer> inputList,
             @ForAll @IntRange(min = 3, max = 150) int givenSum,
             @ForAll @IntRange(min = 2, max = 5) int subSetSize
             ) {
         List<List<Integer>> solutions = GivenSumSubSet.findSubSets(inputList,givenSum,subSetSize);
         return solutions
-                .stream()
+                .parallelStream()
                 .allMatch(solution ->
                         solution.size() == subSetSize &&
-                        solution.parallelStream().reduce(0, Integer::sum) == givenSum
+                        solution.stream().reduce(0, Integer::sum) == givenSum
                 );
     }
 
