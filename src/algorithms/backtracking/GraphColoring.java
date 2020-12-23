@@ -34,7 +34,7 @@ public class GraphColoring {
 
     private static boolean completenessly(IntGraph intGraph, int[] v, int currentVertex) {
         for (int i = 1; i < currentVertex; i++) {
-            if (intGraph.isAdjacent(currentVertex, i) && v[currentVertex - 1] == v[i - 1]) return false;
+            if (intGraph.isAdjacent(currentVertex, i) && v[currentVertex - 1] == v[i - 1 ]) return false;
         }
         return true;
     }

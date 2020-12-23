@@ -20,6 +20,7 @@ class GivenSumSubSetTest {
             @ForAll @IntRange(min = 2, max = 5) int subSetSize
             ) {
         List<List<Integer>> solutions = GivenSumSubSet.findSubSets(inputList,givenSum,subSetSize);
+        System.out.println(solutions.size());
         return solutions
                 .parallelStream()
                 .allMatch(solution ->
