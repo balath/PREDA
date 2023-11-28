@@ -25,6 +25,10 @@ public class GraphColoring {
             }
             v[currentVertex - 1]++;
         }
+        String s = "ese";
+        for (char c: s.toCharArray()) {
+
+        }
     }
 
     private static void process(int[] v) {
