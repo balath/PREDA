@@ -1,8 +1,4 @@
-src/ped1/
-src/ped2/
 .idea/
-test/ped1/
-test/ped2/
 out
 .gitignore
 *.iml
